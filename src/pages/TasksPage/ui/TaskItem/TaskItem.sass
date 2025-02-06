@@ -1,0 +1,41 @@
+@import "../../../../shared/variables"
+
+.task-container
+    background-color: $modals
+    border-radius: 15px
+    
+    padding: 5px 15px 20px 15px 
+    margin-top: 10px 
+
+    display: flex
+    flex-direction: column
+    position: relative
+    z-index: 99
+
+
+
+    &__task-header
+        display: flex
+        flex-direction: row
+        justify-content: space-between
+        align-items: center
+        color: #c5c5c5
+
+        height: 50px
+
+    &__button   
+        background-color: $modals
+        border: none
+
+    &__time-box
+        width: fit-content
+        height: 1.5rem
+        overflow: hidden
+        display: flex
+        flex-direction: row
+        align-items: center
+        font-size: 15px
+        text-wrap: nowrap
+
+
+

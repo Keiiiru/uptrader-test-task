@@ -1,0 +1,73 @@
+@import "../../../../shared/variables"
+
+.comment-tree
+  margin-left: 2rem
+  border-left: 2px solid rgba(255,255,255,0.1)
+  padding-left: 1.5rem
+  position: relative
+
+  .comment
+    background: rgba(255,255,255,0.05)
+    border-radius: 8px
+    padding: 1.5rem
+    margin-bottom: 1rem
+    position: relative
+
+    &::before
+      content: ""
+      position: absolute
+      left: -2rem
+      top: 2rem
+      width: 1rem
+      height: 2px
+      background: rgba(255,255,255,0.2)
+
+    &__content
+      position: relative
+
+    &__text
+      color: #fff
+      margin: 0 0 1rem 0
+      line-height: 1.5
+      font-size: 1rem
+
+    &__reply-btn
+      background: $app-dark
+      color: #fff
+      border: none
+      padding: 0.5rem 1rem
+      border-radius: 5px
+      cursor: pointer
+      font-size: 0.9rem
+      transition: background 0.3s
+
+      &:hover
+        background: darken($app-dark, 10%)
+
+    &__reply-form
+      margin-top: 1.5rem
+      padding-top: 1rem
+      border-top: 1px solid rgba(255,255,255,0.1)
+
+    &__replies
+      margin-top: 1.5rem
+      padding-left: 1rem
+
+@media (max-width: 768px)
+  .comment-tree
+    margin-left: 1rem
+    padding-left: 1rem
+
+    .comment
+      padding: 1rem
+
+      &::before
+        left: -1rem
+        width: 0.5rem
+
+      &__text
+        font-size: 0.95rem
+
+      &__reply-btn
+        padding: 0.4rem 0.8rem
+        font-size: 0.85rem

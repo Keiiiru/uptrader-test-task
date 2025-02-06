@@ -1,0 +1,65 @@
+@import "../../../../shared/variables"
+
+.create-task-form
+    padding: 10px
+
+.form-title
+    font-size: 22px
+
+.form-input, .form-textarea, .file-input
+    margin-top: 10px
+    background-color: $app-dark
+    border: none
+    padding: 10px
+    border-radius: 15px
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15 )
+    color: #fff
+    font-size: 18px
+
+    &:focus
+      outline: 0
+
+.form-select
+    margin-top: 10px
+    margin-bottom: 10px 
+    appearance: none 
+    background-color: $app-dark
+    border: none
+    padding: 10px
+    border-radius: 15px
+    box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15)
+    color: #fff
+    font-size: 18px
+
+    cursor: pointer
+
+
+    &:focus
+    outline: 0
+    box-shadow: 0px 0px 8px 4px rgba(0, 0, 0, 0.2)
+
+.file-upload 
+    display: flex
+    flex-direction: column
+
+input[type="file" i]::-webkit-file-upload-button
+    appearance: none
+    background-color: $ligth-brown
+    color: #fff
+    border: none
+    border-radius: 15px
+    padding: 15px
+
+.form-actions
+    display: flex
+    flex-direction: row
+    gap: 10px
+    margin-top: 10px
+
+.cancel-btn, .submit-btn
+    background-color: $app-dark
+    border: none
+    border-radius: 15px
+    padding: 15px
+    height: 50px
+    color: #fff

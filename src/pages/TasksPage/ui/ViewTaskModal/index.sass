@@ -1,0 +1,66 @@
+@import "../../../../shared/variables"
+
+.comments 
+
+  &__comments-section
+    padding: 2rem
+    background: darken($content-bckgr, 3%)
+    border-radius: 15px
+
+  &__comments-header
+    margin: 0 0 1.5rem 0
+    color: #fff
+    font-size: 1.5rem
+
+  &__task-meta
+    display: flex
+    background-color: $ligth-brown
+    justify-content: space-between
+    color: rgba(255,255,255,0.8)
+    font-size: 0.9rem
+    padding-top: 2rem
+    border-top: 1px solid rgba(255,255,255,0.1)
+
+@media (max-width: 768px)
+  .task-info
+    padding: 1rem
+    gap: 1.5rem
+
+    &__task-header
+      flex-direction: column
+      align-items: flex-start
+      gap: 1rem
+      padding: 1rem
+
+    &__title
+      font-size: 1.5rem
+      max-width: 100%
+
+    &__task-priority
+      font-size: 0.9rem
+      padding: 0.6rem 1rem
+
+    &__description
+      padding: 1rem
+      font-size: 0.95rem
+
+    &__subtasks-section,
+    &__comments-section
+      padding: 1rem
+
+    .subtask-form
+      padding: 1rem
+      gap: 1rem
+
+      input, textarea, select
+        padding: 0.8rem
+        font-size: 0.9rem
+
+      button[type="submit"]
+        width: 100%
+        justify-self: center
+
+    &__task-meta
+      flex-direction: column
+      gap: 0.5rem
+      padding-top: 1.5rem

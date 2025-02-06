@@ -1,0 +1,67 @@
+@import "../../shared/variables"
+
+
+.item-container
+  display: flex
+  flex-direction: column
+  width: 100%
+  gap: 15px
+  margin-top: 20px
+  border-radius: 15px
+  padding: 0
+  color: #fff
+  background-color: $app-dark
+  font-size: 20px
+  box-shadow: 0px 0px 6px 3px rgba(0, 0, 0, 0.15 )
+  transition: all 0.6s ease-in-out
+  position: relative
+  height: fit-content
+  z-index: 3
+
+
+  &__header
+    display: flex
+    justify-content: space-between
+    align-items: center
+    padding: 20px 15px 0
+    transition: inherit 
+
+
+
+  &__button
+    background: none
+    border: none
+    width: 30px
+    height: 30px
+    cursor: pointer
+    transition: transform 1s cubic-bezier(0.68, -0.55, 0.27, 1.55)
+
+  &__link 
+    display: flex
+    align-items: center
+    text-decoration: none
+    color: #fff
+    font-size: 22px
+    font-weight: 600
+    transition: opacity 0.5s ease
+
+  &__content
+    max-height: 0
+    transition: max-height 1.2s cubic-bezier(0.4, 0, 0.2, 1)
+    padding: 0 15px
+    margin-bottom: 15px
+    will-change: max-height 
+
+    > * 
+      opacity: 0
+      transform: translateY(-10px)
+      transition: all 0.8s ease 0.2s
+
+    &.visible
+      max-height: 1000px
+      > *
+        opacity: 1
+        transform: translateY(0)
+
+.open 
+  max-height: 1000px
